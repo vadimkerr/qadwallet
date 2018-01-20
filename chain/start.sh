@@ -11,7 +11,7 @@ MINER='0xd837adae7b3987461f412c41528EF709bbdad8a8'
 /bin/rm -rf data
 /bin/cp -R data.orig data
 
-GETH_ARGS="--datadir data --networkid 47 --minerthreads 1 --etherbase ${MINER} --unlock ${MINER} --password passwd"
+GETH_ARGS="--datadir data --networkid 47 --minerthreads 1 --nodiscover --port 30393 --etherbase ${MINER} --unlock ${MINER} --password passwd"
 
 if [ "$2" == "silent" ]; then
     exec ${GETH_BIN} ${GETH_ARGS} &>/dev/null
