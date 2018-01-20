@@ -11,6 +11,13 @@ if [ "${2}" != "" ]; then
     PYTHON=${2}
 fi
 
+PYTHON_DIR=`dirname "${PYTHON}"`
+check_version_web3=` ${PYTHON_DIR}/pip show web3 | egrep 'Version:\s+4\.'`
+if [ "${check_version_web3}" == "" ]; then
+    echo "Version 4.x of web3.py is needed"
+    exit 1
+fi
+
 cd ./chain
 
 echo "Test chain is being deployed..."
