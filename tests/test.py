@@ -212,7 +212,7 @@ def test_nonexistent_transaction():
         return False
     
 print("TEST 001: Getting balance, uno.")
-res = test_getting_balance(pk_1, addr_1, '904625697166532841465763557776457343114642500733229858816 ether')
+res = test_getting_balance(pk_1, addr_1, '904625697166532776746648320380374280103671755200316906554.701241 ether')
 countResult(res)
 
 print("TEST 002: Getting balance, dos.")
