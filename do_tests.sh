@@ -1,7 +1,7 @@
 #!/bin/bash
 
-GETH_BIN='/opt/geth/geth'
-PYTHON='/opt/anaconda3/bin/python'
+GETH_BIN='/usr/bin/geth'
+PYTHON='/home/delta/.virtualenvs/qadwallet-testenv/bin/python3'
 
 if [ "${1}" != "" ]; then
     GETH_BIN=${1}
@@ -11,8 +11,7 @@ if [ "${2}" != "" ]; then
     PYTHON=${2}
 fi
 
-PYTHON_DIR=`dirname "${PYTHON}"`
-check_version_web3=` ${PYTHON_DIR}/pip show web3 | egrep 'Version:\s+4\.'`
+check_version_web3=` ${PYTHON} -m pip show web3 | egrep 'Version:\s+4\.'`
 if [ "${check_version_web3}" == "" ]; then
     echo "Version 4.x of web3.py is needed"
     exit 1
