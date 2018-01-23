@@ -1,3 +1,5 @@
+Original repo: https://github.com/akolotov/qadwallet-testenv
+
 These set of files is intended to perform automatic testing of 'qadwallet' assignement.
 
 The statement of the assignement is available on https://goo.gl/zjpJp6 (Task #1).
